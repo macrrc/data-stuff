@@ -1,19 +1,16 @@
 # Classes for processing records
 
-class RecordProcessor:
-    def __init__(self):
-        pass
-
-    
-
 class Record:
-    def __init__(self):
-        self.data_points = []
+    def __init__(self, header, record):
+        self.record = record
+        self.header = header
+        self.data_points = self.parse(self.record)
 
     def parse(self):
-        pass
+        print("Parsing record...")
 
-
+    def get_value_from_key(self, key):
+        return self.data_points[key]
 
 
 class HeaderRecord(Record):

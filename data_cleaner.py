@@ -20,5 +20,7 @@ test_rows = [
 
 for row in test_rows:
     record = rp.Record(header_row, row)
-    record.parse()
+    for key, value in record:
+        print(key, value)
+    
 
